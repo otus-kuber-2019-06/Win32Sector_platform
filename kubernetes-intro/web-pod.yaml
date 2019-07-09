@@ -1,9 +1,9 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: web-pod
+  name: web
   labels:
-    type: web
+    app: web
 spec:
   initContainers:
   - name: init-web
@@ -13,7 +13,7 @@ spec:
     - mountPath: /app
       name: app
   containers:
-  - name: web-pod
+  - name: web
     image: win32sector/kubernetes-intro-kozlov:py
     volumeMounts:
     - mountPath: /app
