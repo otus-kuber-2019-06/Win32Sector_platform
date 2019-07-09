@@ -37,7 +37,7 @@ k apply -f web-pod.yml
 Затем прокинул порты командой
 
 ```
-kubectl port-forward --address 0.0.0.0 pod/web-pod 8000:8000
+k port-forward --address 0.0.0.0 pod/web-pod 8000:8000
 ```
 
 И наблюдал в браузере на виртуалке вот такую красоту:
